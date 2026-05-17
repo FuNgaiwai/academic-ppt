@@ -15,7 +15,6 @@ The skill enforces strict data integrity: **every fact on every slide must be tr
 | [Zotero desktop](https://www.zotero.org/) 7+ | ✅ |
 | [Zotero MCP for Claude Code](https://github.com/lricher7329/zotero-mcp-claude-code) plugin | ✅ |
 | Zotero MCP write scopes: `collections`, `metadata`, `bulk` | ✅ |
-| Chrome DevTools MCP (`claude mcp add -s user chrome-devtools -- npx -y chrome-devtools-mcp@latest`) | ✅ |
 | Node.js + `pptxgenjs` (`npm install -g pptxgenjs`) | ✅ |
 | Python `pymupdf` (`pip install pymupdf`) | ✅ |
 

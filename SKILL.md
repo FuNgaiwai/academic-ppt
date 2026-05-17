@@ -12,18 +12,17 @@ End-to-end pipeline: search PubMed → import to Zotero → screen & assess → 
 
 - Zotero desktop with [Zotero MCP for Claude Code](https://github.com/lricher7329/zotero-mcp-claude-code) plugin installed
 - Zotero MCP write scopes enabled: `collections`, `metadata`, `bulk`
-- Chrome DevTools MCP configured (`claude mcp add -s user chrome-devtools -- npx -y chrome-devtools-mcp@latest`)
-- Chrome running with remote debugging: `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-debug-profile"`
 - Python packages: `pymupdf` (PDF text/image extraction)
 - Node.js packages: `pptxgenjs` (slide generation)
+- `curl` (for PubMed E-utilities API — pre-installed on macOS/Linux)
 
 ## Phase 0: Environment Check
 
-Before starting, verify MCP servers:
+Before starting, verify Zotero MCP:
 
 ```bash
 claude mcp list
-# Must show chrome-devtools and zotero-mcp as Connected
+# Must show zotero-mcp as Connected
 ```
 
 Check Zotero write scopes by listing tools—at minimum `create_item`, `batch_add_to_collection`, and `batch_tag` must be present:
